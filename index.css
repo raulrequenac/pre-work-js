@@ -5,9 +5,14 @@ body {
   height: 100vh;
 }
 
+td {
+  display: contents;
+}
+
 input {
   font-weight: 700;
   font-size: 1rem;
+  margin: .1rem;
 }
 
 #calculator {
@@ -18,11 +23,24 @@ input {
 }
 
 #display {
-  padding: 1rem;
-  width: -webkit-fill-available;
-  text-align: end;
-  margin-bottom: 2rem;
   border: 4px inset #8da0b3;
+  line-height: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#current-display, 
+#equation {
+  text-align: end;
+  border: 0;
+  margin: 0;
+  padding: .5rem;
+}
+
+#equation {
+  font-weight: lighter;
+  color: gray;
 }
 
 .button {
@@ -30,5 +48,6 @@ input {
   padding: 1rem;
   text-align: center;
   border: 3px outset #8da0b3;
+  border-radius: 5px;
   cursor: pointer;
 }

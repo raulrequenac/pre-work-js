@@ -11,12 +11,11 @@
 
   <body>
     <form id="calculator">
+      <div id="display">
+        <input type="text" name="display" id="current-display" />
+        <input name="equation" id="equation" placeholder="0"/>
+      </div>
       <table>
-        <tr>
-          <td colspan="4">
-            <input type="text" name="display" id="display" placeholder="0" />
-          </td>
-        </tr>
         <tr id="buttons">
           <td>
             <input
@@ -47,7 +46,7 @@
               class="button"
               name="plus"
               value="+"
-              onclick="addToDisplay(plus.value)"
+              onclick="addOperator(plus.value)"
             />
           </td>
         </tr>
@@ -81,7 +80,7 @@
               class="button"
               name="minus"
               value="-"
-              onclick="addToDisplay(minus.value)"
+              onclick="addOperator(minus.value)"
             />
           </td>
         </tr>
@@ -115,7 +114,7 @@
               class="button"
               name="times"
               value="x"
-              onclick="addToDisplay('*')"
+              onclick="addOperator('*')"
             />
           </td>
         </tr>
@@ -126,7 +125,7 @@
               class="button"
               name="clear"
               value="c"
-              onclick="clearDisplay()"
+              onclick="clearAll()"
             />
           </td>
           <td>
@@ -151,7 +150,7 @@
               class="button"
               name="div"
               value="/"
-              onclick="addToDisplay(div.value)"
+              onclick="addOperator(div.value)"
             />
           </td>
         </tr>
